@@ -6,6 +6,6 @@ ARG source
 SHELL ["powershell"]
 EXPOSE 80
 WORKDIR /inetpub/wwwroot
-COPY ${source:-obj/Docker/publish} .
+COPY ["https://github.com/charankumar4321/dockerApp.git":c:\wwwrot\intpub]
 CMD ["dockerapp","-DFOREGROUND"]
 ENTRYPOINT ["dotnet", "dockerApp.dll"]
